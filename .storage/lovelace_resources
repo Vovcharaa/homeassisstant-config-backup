@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace_resources",
+  "data": {
+    "items": [
+      {
+        "id": "7c066f99d3714e72ac38e8772964cc0a",
+        "url": "/hacsfiles/jk-bms-card/jk-bms-card.js?hacstag=9748989791219",
+        "type": "module"
+      },
+      {
+        "id": "804232340bf3493d83ab4e60bd0bc921",
+        "url": "/hacsfiles/lovelace-mushroom/mushroom.js?hacstag=444350375511",
+        "type": "module"
+      },
+      {
+        "id": "3ad90c28b2ef41c3a49f98d3fe4ac46d",
+        "url": "/hacsfiles/apexcharts-card/apexcharts-card.js?hacstag=331701152223",
+        "type": "module"
+      },
+      {
+        "id": "d63ea95201424093b7446aaa2d614dd9",
+        "url": "/hacsfiles/lovelace-layout-card/layout-card.js?hacstag=156434866247",
+        "type": "module"
+      },
+      {
+        "id": "d122c139a8e94bf887e1c2a311323e86",
+        "url": "/hacsfiles/vertical-stack-in-card/vertical-stack-in-card.js?hacstag=142051833101",
+        "type": "module"
+      },
+      {
+        "id": "8406905319134620b2bb423429a30a3a",
+        "url": "/bambu_lab/ha-bambulab-cards.js?v=0.6.50",
+        "type": "module"
+      }
+    ]
+  }
+}

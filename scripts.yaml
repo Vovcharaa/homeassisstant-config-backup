@@ -1,0 +1,170 @@
+vacuum_mala_kimnata_sweep:
+  alias: Мала кімната Sweep
+  sequence:
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.vacuum_active_job
+    data:
+      option: mala_sweep
+  - action: select.select_option
+    target:
+      entity_id: select.xiaomi_de_1171929617_ov51gl_sweep_mop_type_p_2_4
+    data:
+      option: Vacuuming
+  - action: notify.send_message
+    target:
+      entity_id: notify.xiaomi_de_1171929617_ov51gl_start_vacuum_room_sweep_a_2_16
+    data:
+      message: '4'
+vacuum_mala_kimnata_sweep_mop:
+  alias: Мала кімната Sweep & Mop
+  sequence:
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.vacuum_active_job
+    data:
+      option: mala_mop
+  - action: select.select_option
+    target:
+      entity_id: select.xiaomi_de_1171929617_ov51gl_sweep_mop_type_p_2_4
+    data:
+      option: Vacuuming & Mopping
+  - action: notify.send_message
+    target:
+      entity_id: notify.xiaomi_de_1171929617_ov51gl_start_vacuum_room_sweep_a_2_16
+    data:
+      message: '4'
+vacuum_korydor_sweep:
+  alias: Коридор Sweep
+  sequence:
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.vacuum_active_job
+    data:
+      option: korydor_sweep
+  - action: select.select_option
+    target:
+      entity_id: select.xiaomi_de_1171929617_ov51gl_sweep_mop_type_p_2_4
+    data:
+      option: Vacuuming
+  - action: notify.send_message
+    target:
+      entity_id: notify.xiaomi_de_1171929617_ov51gl_start_vacuum_room_sweep_a_2_16
+    data:
+      message: '6'
+vacuum_korydor_sweep_mop:
+  alias: Коридор Sweep & Mop
+  sequence:
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.vacuum_active_job
+    data:
+      option: korydor_mop
+  - action: select.select_option
+    target:
+      entity_id: select.xiaomi_de_1171929617_ov51gl_sweep_mop_type_p_2_4
+    data:
+      option: Vacuuming & Mopping
+  - action: notify.send_message
+    target:
+      entity_id: notify.xiaomi_de_1171929617_ov51gl_start_vacuum_room_sweep_a_2_16
+    data:
+      message: '6'
+vacuum_kuhnya_sweep:
+  alias: Кухня Sweep
+  sequence:
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.vacuum_active_job
+    data:
+      option: kuhnya_sweep
+  - action: select.select_option
+    target:
+      entity_id: select.xiaomi_de_1171929617_ov51gl_sweep_mop_type_p_2_4
+    data:
+      option: Vacuuming
+  - action: notify.send_message
+    target:
+      entity_id: notify.xiaomi_de_1171929617_ov51gl_start_vacuum_room_sweep_a_2_16
+    data:
+      message: '7'
+vacuum_kuhnya_sweep_mop:
+  alias: Кухня Sweep & Mop
+  sequence:
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.vacuum_active_job
+    data:
+      option: kuhnya_mop
+  - action: select.select_option
+    target:
+      entity_id: select.xiaomi_de_1171929617_ov51gl_sweep_mop_type_p_2_4
+    data:
+      option: Vacuuming & Mopping
+  - action: notify.send_message
+    target:
+      entity_id: notify.xiaomi_de_1171929617_ov51gl_start_vacuum_room_sweep_a_2_16
+    data:
+      message: '7'
+vacuum_vanna_sweep:
+  alias: Ванна Sweep
+  sequence:
+  - action: select.select_option
+    target:
+      entity_id: select.xiaomi_de_1171929617_ov51gl_sweep_mop_type_p_2_4
+    data:
+      option: Vacuuming
+  - action: notify.send_message
+    target:
+      entity_id: notify.xiaomi_de_1171929617_ov51gl_start_vacuum_room_sweep_a_2_16
+    data:
+      message: '9'
+vacuum_vanna_sweep_mop:
+  alias: Ванна Sweep & Mop
+  sequence:
+  - action: select.select_option
+    target:
+      entity_id: select.xiaomi_de_1171929617_ov51gl_sweep_mop_type_p_2_4
+    data:
+      option: Vacuuming & Mopping
+  - action: notify.send_message
+    target:
+      entity_id: notify.xiaomi_de_1171929617_ov51gl_start_vacuum_room_sweep_a_2_16
+    data:
+      message: '9'
+vacuum_velyka_kimnata_sweep:
+  alias: Велика кімната Sweep
+  sequence:
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.vacuum_active_job
+    data:
+      option: velyka_sweep
+  - action: select.select_option
+    target:
+      entity_id: select.xiaomi_de_1171929617_ov51gl_sweep_mop_type_p_2_4
+    data:
+      option: Vacuuming
+  - action: notify.send_message
+    target:
+      entity_id: notify.xiaomi_de_1171929617_ov51gl_start_vacuum_room_sweep_a_2_16
+    data:
+      message: '14'
+vacuum_velyka_kimnata_sweep_mop:
+  alias: Велика кімната Sweep & Mop
+  sequence:
+  - action: input_select.select_option
+    target:
+      entity_id: input_select.vacuum_active_job
+    data:
+      option: velyka_mop
+  - action: select.select_option
+    target:
+      entity_id: select.xiaomi_de_1171929617_ov51gl_sweep_mop_type_p_2_4
+    data:
+      option: Vacuuming & Mopping
+  - action: notify.send_message
+    target:
+      entity_id: notify.xiaomi_de_1171929617_ov51gl_start_vacuum_room_sweep_a_2_16
+    data:
+      message: '14'

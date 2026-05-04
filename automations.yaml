@@ -1,0 +1,24 @@
+- id: '1776194440648'
+  alias: Reset Vacuum Active Job
+  description: Reset the dashboard vacuum room lock when the vacuum finishes cleaning
+    and becomes idle or docked.
+  triggers:
+  - platform: state
+    entity_id: vacuum.xiaomi_de_1171929617_ov51gl
+    to: idle
+  - platform: state
+    entity_id: vacuum.xiaomi_de_1171929617_ov51gl
+    to: docked
+  conditions:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: input_select.vacuum_active_job
+      state: idle
+  actions:
+  - target:
+      entity_id: input_select.vacuum_active_job
+    data:
+      option: idle
+    action: input_select.select_option
+  mode: single
