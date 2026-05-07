@@ -38,11 +38,6 @@
         "id": "b8c7e2ef9c1c4b328699b082be780222",
         "url": "/hacsfiles/lovelace-expander-card/expander-card.js?hacstag=677140532707",
         "type": "module"
-      },
-      {
-        "id": "2c7e3ebb15484084a0ed096db05d9ffe",
-        "url": "/hacsfiles/lovelace-expander-card/expander-card.js",
-        "type": "module"
       }
     ]
   }
