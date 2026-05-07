@@ -22,3 +22,39 @@
       option: idle
     action: input_select.select_option
   mode: single
+- id: '1778184090465'
+  alias: BILRESA dual button controls desk plug
+  description: Use single press on BILRESA dual button to control the desk smart plug.
+    Button 1 turns the plug on, button 2 turns it off.
+  triggers:
+  - platform: state
+    entity_id: event.bilresa_dual_button_button_1
+    id: button_1
+  - platform: state
+    entity_id: event.bilresa_dual_button_button_2
+    id: button_2
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: button_1
+      - condition: state
+        entity_id: event.bilresa_dual_button_button_1
+        attribute: event_type
+        state: multi_press_1
+      sequence:
+      - target:
+          entity_id: switch.grillplats_plug
+        action: switch.turn_on
+    - conditions:
+      - condition: trigger
+        id: button_2
+      - condition: state
+        entity_id: event.bilresa_dual_button_button_2
+        attribute: event_type
+        state: multi_press_1
+      sequence:
+      - target:
+          entity_id: switch.grillplats_plug
+        action: switch.turn_off
+  mode: single
