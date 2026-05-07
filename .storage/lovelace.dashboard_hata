@@ -937,6 +937,11 @@
             {
               "type": "entity",
               "entity": "sensor.vovkcell_state_of_charge"
+            },
+            {
+              "type": "entity",
+              "entity": "sensor.vovkcell_power_source",
+              "name": "Джерело"
             }
           ]
         },
