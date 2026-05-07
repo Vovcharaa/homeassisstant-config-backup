@@ -43,6 +43,46 @@
                   "features_position": "bottom"
                 },
                 {
+                  "type": "custom:expander-card",
+                  "clear-children": true,
+                  "title-card-button-overlay": true,
+                  "title-card": {
+                    "type": "tile",
+                    "entity": "switch.grillplats_plug",
+                    "name": "Розетка",
+                    "icon": "mdi:power-plug",
+                    "vertical": false,
+                    "features_position": "bottom",
+                    "tap_action": {
+                      "action": "toggle"
+                    },
+                    "icon_tap_action": {
+                      "action": "toggle"
+                    }
+                  },
+                  "cards": [
+                    {
+                      "type": "entities",
+                      "show_header_toggle": false,
+                      "state_color": true,
+                      "entities": [
+                        {
+                          "entity": "sensor.grillplats_plug_power",
+                          "name": "Потужність"
+                        },
+                        {
+                          "entity": "sensor.grillplats_plug_energy",
+                          "name": "Енергія"
+                        },
+                        {
+                          "entity": "sensor.grillplats_plug_voltage",
+                          "name": "Напруга"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
                   "type": "conditional",
                   "conditions": [
                     {
