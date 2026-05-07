@@ -49,7 +49,7 @@
                   "title-card": {
                     "type": "tile",
                     "entity": "switch.grillplats_plug",
-                    "name": "Розетка",
+                    "name": "Робочий Стіл",
                     "icon": "mdi:power-plug",
                     "vertical": false,
                     "features_position": "bottom",
@@ -73,14 +73,16 @@
                         {
                           "entity": "sensor.grillplats_plug_energy",
                           "name": "Енергія"
-                        },
-                        {
-                          "entity": "sensor.grillplats_plug_voltage",
-                          "name": "Напруга"
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  },
+                  "padding": "0.5em",
+                  "child-padding": "0.25em"
                 },
                 {
                   "type": "conditional",
