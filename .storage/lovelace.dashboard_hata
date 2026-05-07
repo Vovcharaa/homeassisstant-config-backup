@@ -43,46 +43,42 @@
                   "features_position": "bottom"
                 },
                 {
-                  "type": "custom:expander-card",
-                  "clear-children": true,
-                  "title-card-button-overlay": true,
-                  "title-card": {
-                    "type": "tile",
-                    "entity": "switch.grillplats_plug",
-                    "name": "Робочий Стіл",
-                    "icon": "mdi:power-plug",
-                    "vertical": false,
-                    "features_position": "bottom",
-                    "tap_action": {
-                      "action": "toggle"
-                    },
-                    "icon_tap_action": {
-                      "action": "toggle"
-                    }
-                  },
-                  "cards": [
-                    {
-                      "type": "entities",
-                      "show_header_toggle": false,
-                      "state_color": true,
-                      "entities": [
-                        {
-                          "entity": "sensor.grillplats_plug_power",
-                          "name": "Потужність"
-                        },
-                        {
-                          "entity": "sensor.grillplats_plug_energy",
-                          "name": "Енергія"
-                        }
-                      ]
-                    }
-                  ],
+                  "type": "tile",
+                  "entity": "switch.grillplats_plug",
+                  "name": "Робочий Стіл",
+                  "icon": "mdi:power-plug",
+                  "vertical": false,
+                  "features_position": "bottom",
                   "grid_options": {
                     "columns": 6,
                     "rows": "auto"
                   },
-                  "padding": "0.5em",
-                  "child-padding": "0.25em"
+                  "tap_action": {
+                    "action": "fire-dom-event",
+                    "browser_mod": {
+                      "service": "browser_mod.popup",
+                      "data": {
+                        "title": "Робочий Стіл",
+                        "content": {
+                          "type": "entities",
+                          "show_header_toggle": false,
+                          "entities": [
+                            {
+                              "entity": "sensor.grillplats_plug_power",
+                              "name": "Потужність"
+                            },
+                            {
+                              "entity": "sensor.grillplats_plug_energy",
+                              "name": "Енергія"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "icon_tap_action": {
+                    "action": "toggle"
+                  }
                 },
                 {
                   "type": "conditional",
