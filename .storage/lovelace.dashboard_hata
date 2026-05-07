@@ -14,11 +14,27 @@
                 {
                   "type": "heading",
                   "heading_style": "title",
-                  "heading": "Кухня"
+                  "heading": "Велика кімната"
                 },
                 {
                   "type": "tile",
-                  "entity": "media_player.telik_kukhnia",
+                  "entity": "sensor.timmerflotte_temp_hmd_sensor_temperature",
+                  "name": "Температура",
+                  "icon": "mdi:thermometer",
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.timmerflotte_temp_hmd_sensor_humidity",
+                  "name": "Вологість",
+                  "icon": "mdi:water-percent",
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "media_player.big_screen_qe50q60aauxua",
                   "name": "Телік",
                   "vertical": false,
                   "icon_tap_action": {
@@ -37,7 +53,7 @@
                   ],
                   "card": {
                     "type": "tile",
-                    "entity": "script.vacuum_kuhnya_sweep",
+                    "entity": "script.vacuum_velyka_kimnata_sweep",
                     "name": "Прибрати",
                     "icon": "mdi:robot-vacuum",
                     "hide_state": true,
@@ -64,12 +80,12 @@
                     {
                       "condition": "state",
                       "entity": "input_select.vacuum_active_job",
-                      "state": "kuhnya_sweep"
+                      "state": "velyka_sweep"
                     }
                   ],
                   "card": {
                     "type": "tile",
-                    "entity": "script.vacuum_kuhnya_sweep",
+                    "entity": "script.vacuum_velyka_kimnata_sweep",
                     "name": "Прибирається",
                     "icon": "mdi:robot-vacuum",
                     "hide_state": true,
@@ -102,12 +118,12 @@
                     {
                       "condition": "state",
                       "entity": "input_select.vacuum_active_job",
-                      "state_not": "kuhnya_sweep"
+                      "state_not": "velyka_sweep"
                     }
                   ],
                   "card": {
                     "type": "tile",
-                    "entity": "script.vacuum_kuhnya_sweep",
+                    "entity": "script.vacuum_velyka_kimnata_sweep",
                     "name": "Прибрати",
                     "icon": "mdi:robot-vacuum",
                     "hide_state": true,
@@ -139,7 +155,7 @@
                   ],
                   "card": {
                     "type": "tile",
-                    "entity": "script.vacuum_kuhnya_sweep_mop",
+                    "entity": "script.vacuum_velyka_kimnata_sweep_mop",
                     "name": "Помити",
                     "icon": "mdi:robot-vacuum",
                     "hide_state": true,
@@ -166,12 +182,12 @@
                     {
                       "condition": "state",
                       "entity": "input_select.vacuum_active_job",
-                      "state": "kuhnya_mop"
+                      "state": "velyka_mop"
                     }
                   ],
                   "card": {
                     "type": "tile",
-                    "entity": "script.vacuum_kuhnya_sweep_mop",
+                    "entity": "script.vacuum_velyka_kimnata_sweep_mop",
                     "name": "Миється",
                     "icon": "mdi:robot-vacuum",
                     "hide_state": true,
@@ -204,12 +220,12 @@
                     {
                       "condition": "state",
                       "entity": "input_select.vacuum_active_job",
-                      "state_not": "kuhnya_mop"
+                      "state_not": "velyka_mop"
                     }
                   ],
                   "card": {
                     "type": "tile",
-                    "entity": "script.vacuum_kuhnya_sweep_mop",
+                    "entity": "script.vacuum_velyka_kimnata_sweep_mop",
                     "name": "Помити",
                     "icon": "mdi:robot-vacuum",
                     "hide_state": true,
@@ -466,6 +482,230 @@
                 {
                   "type": "heading",
                   "heading_style": "title",
+                  "heading": "Кухня"
+                },
+                {
+                  "type": "tile",
+                  "entity": "media_player.telik_kukhnia",
+                  "name": "Телік",
+                  "vertical": false,
+                  "icon_tap_action": {
+                    "action": "toggle"
+                  },
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "conditional",
+                  "conditions": [
+                    {
+                      "condition": "state",
+                      "entity": "input_select.vacuum_active_job",
+                      "state": "idle"
+                    }
+                  ],
+                  "card": {
+                    "type": "tile",
+                    "entity": "script.vacuum_kuhnya_sweep",
+                    "name": "Прибрати",
+                    "icon": "mdi:robot-vacuum",
+                    "hide_state": true,
+                    "vertical": false,
+                    "features_position": "bottom",
+                    "tap_action": {
+                      "action": "toggle"
+                    },
+                    "hold_action": {
+                      "action": "none"
+                    },
+                    "grid_options": {
+                      "columns": 6
+                    }
+                  },
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
+                },
+                {
+                  "type": "conditional",
+                  "conditions": [
+                    {
+                      "condition": "state",
+                      "entity": "input_select.vacuum_active_job",
+                      "state": "kuhnya_sweep"
+                    }
+                  ],
+                  "card": {
+                    "type": "tile",
+                    "entity": "script.vacuum_kuhnya_sweep",
+                    "name": "Прибирається",
+                    "icon": "mdi:robot-vacuum",
+                    "hide_state": true,
+                    "vertical": false,
+                    "features_position": "bottom",
+                    "tap_action": {
+                      "action": "none"
+                    },
+                    "hold_action": {
+                      "action": "none"
+                    },
+                    "color": "yellow",
+                    "grid_options": {
+                      "columns": 6
+                    }
+                  },
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
+                },
+                {
+                  "type": "conditional",
+                  "conditions": [
+                    {
+                      "condition": "state",
+                      "entity": "input_select.vacuum_active_job",
+                      "state_not": "idle"
+                    },
+                    {
+                      "condition": "state",
+                      "entity": "input_select.vacuum_active_job",
+                      "state_not": "kuhnya_sweep"
+                    }
+                  ],
+                  "card": {
+                    "type": "tile",
+                    "entity": "script.vacuum_kuhnya_sweep",
+                    "name": "Прибрати",
+                    "icon": "mdi:robot-vacuum",
+                    "hide_state": true,
+                    "vertical": false,
+                    "features_position": "bottom",
+                    "tap_action": {
+                      "action": "none"
+                    },
+                    "hold_action": {
+                      "action": "none"
+                    },
+                    "grid_options": {
+                      "columns": 6
+                    }
+                  },
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
+                },
+                {
+                  "type": "conditional",
+                  "conditions": [
+                    {
+                      "condition": "state",
+                      "entity": "input_select.vacuum_active_job",
+                      "state": "idle"
+                    }
+                  ],
+                  "card": {
+                    "type": "tile",
+                    "entity": "script.vacuum_kuhnya_sweep_mop",
+                    "name": "Помити",
+                    "icon": "mdi:robot-vacuum",
+                    "hide_state": true,
+                    "vertical": false,
+                    "features_position": "bottom",
+                    "tap_action": {
+                      "action": "toggle"
+                    },
+                    "hold_action": {
+                      "action": "none"
+                    },
+                    "grid_options": {
+                      "columns": 6
+                    }
+                  },
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
+                },
+                {
+                  "type": "conditional",
+                  "conditions": [
+                    {
+                      "condition": "state",
+                      "entity": "input_select.vacuum_active_job",
+                      "state": "kuhnya_mop"
+                    }
+                  ],
+                  "card": {
+                    "type": "tile",
+                    "entity": "script.vacuum_kuhnya_sweep_mop",
+                    "name": "Миється",
+                    "icon": "mdi:robot-vacuum",
+                    "hide_state": true,
+                    "vertical": false,
+                    "features_position": "bottom",
+                    "tap_action": {
+                      "action": "none"
+                    },
+                    "hold_action": {
+                      "action": "none"
+                    },
+                    "color": "green",
+                    "grid_options": {
+                      "columns": 6
+                    }
+                  },
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
+                },
+                {
+                  "type": "conditional",
+                  "conditions": [
+                    {
+                      "condition": "state",
+                      "entity": "input_select.vacuum_active_job",
+                      "state_not": "idle"
+                    },
+                    {
+                      "condition": "state",
+                      "entity": "input_select.vacuum_active_job",
+                      "state_not": "kuhnya_mop"
+                    }
+                  ],
+                  "card": {
+                    "type": "tile",
+                    "entity": "script.vacuum_kuhnya_sweep_mop",
+                    "name": "Помити",
+                    "icon": "mdi:robot-vacuum",
+                    "hide_state": true,
+                    "vertical": false,
+                    "features_position": "bottom",
+                    "tap_action": {
+                      "action": "none"
+                    },
+                    "hold_action": {
+                      "action": "none"
+                    },
+                    "grid_options": {
+                      "columns": 6
+                    }
+                  },
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
                   "heading": "Мала кімната"
                 },
                 {
@@ -652,246 +892,6 @@
                   "card": {
                     "type": "tile",
                     "entity": "script.vacuum_mala_kimnata_sweep_mop",
-                    "name": "Помити",
-                    "icon": "mdi:robot-vacuum",
-                    "hide_state": true,
-                    "vertical": false,
-                    "features_position": "bottom",
-                    "tap_action": {
-                      "action": "none"
-                    },
-                    "hold_action": {
-                      "action": "none"
-                    },
-                    "grid_options": {
-                      "columns": 6
-                    }
-                  },
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": "auto"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "grid",
-              "cards": [
-                {
-                  "type": "heading",
-                  "heading_style": "title",
-                  "heading": "Велика кімната"
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.timmerflotte_temp_hmd_sensor_temperature",
-                  "name": "Температура",
-                  "icon": "mdi:thermometer",
-                  "vertical": false,
-                  "features_position": "bottom"
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.timmerflotte_temp_hmd_sensor_humidity",
-                  "name": "Вологість",
-                  "icon": "mdi:water-percent",
-                  "vertical": false,
-                  "features_position": "bottom"
-                },
-                {
-                  "type": "tile",
-                  "entity": "media_player.big_screen_qe50q60aauxua",
-                  "name": "Телік",
-                  "vertical": false,
-                  "icon_tap_action": {
-                    "action": "toggle"
-                  },
-                  "features_position": "bottom"
-                },
-                {
-                  "type": "conditional",
-                  "conditions": [
-                    {
-                      "condition": "state",
-                      "entity": "input_select.vacuum_active_job",
-                      "state": "idle"
-                    }
-                  ],
-                  "card": {
-                    "type": "tile",
-                    "entity": "script.vacuum_velyka_kimnata_sweep",
-                    "name": "Прибрати",
-                    "icon": "mdi:robot-vacuum",
-                    "hide_state": true,
-                    "vertical": false,
-                    "features_position": "bottom",
-                    "tap_action": {
-                      "action": "toggle"
-                    },
-                    "hold_action": {
-                      "action": "none"
-                    },
-                    "grid_options": {
-                      "columns": 6
-                    }
-                  },
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": "auto"
-                  }
-                },
-                {
-                  "type": "conditional",
-                  "conditions": [
-                    {
-                      "condition": "state",
-                      "entity": "input_select.vacuum_active_job",
-                      "state": "velyka_sweep"
-                    }
-                  ],
-                  "card": {
-                    "type": "tile",
-                    "entity": "script.vacuum_velyka_kimnata_sweep",
-                    "name": "Прибирається",
-                    "icon": "mdi:robot-vacuum",
-                    "hide_state": true,
-                    "vertical": false,
-                    "features_position": "bottom",
-                    "tap_action": {
-                      "action": "none"
-                    },
-                    "hold_action": {
-                      "action": "none"
-                    },
-                    "color": "yellow",
-                    "grid_options": {
-                      "columns": 6
-                    }
-                  },
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": "auto"
-                  }
-                },
-                {
-                  "type": "conditional",
-                  "conditions": [
-                    {
-                      "condition": "state",
-                      "entity": "input_select.vacuum_active_job",
-                      "state_not": "idle"
-                    },
-                    {
-                      "condition": "state",
-                      "entity": "input_select.vacuum_active_job",
-                      "state_not": "velyka_sweep"
-                    }
-                  ],
-                  "card": {
-                    "type": "tile",
-                    "entity": "script.vacuum_velyka_kimnata_sweep",
-                    "name": "Прибрати",
-                    "icon": "mdi:robot-vacuum",
-                    "hide_state": true,
-                    "vertical": false,
-                    "features_position": "bottom",
-                    "tap_action": {
-                      "action": "none"
-                    },
-                    "hold_action": {
-                      "action": "none"
-                    },
-                    "grid_options": {
-                      "columns": 6
-                    }
-                  },
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": "auto"
-                  }
-                },
-                {
-                  "type": "conditional",
-                  "conditions": [
-                    {
-                      "condition": "state",
-                      "entity": "input_select.vacuum_active_job",
-                      "state": "idle"
-                    }
-                  ],
-                  "card": {
-                    "type": "tile",
-                    "entity": "script.vacuum_velyka_kimnata_sweep_mop",
-                    "name": "Помити",
-                    "icon": "mdi:robot-vacuum",
-                    "hide_state": true,
-                    "vertical": false,
-                    "features_position": "bottom",
-                    "tap_action": {
-                      "action": "toggle"
-                    },
-                    "hold_action": {
-                      "action": "none"
-                    },
-                    "grid_options": {
-                      "columns": 6
-                    }
-                  },
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": "auto"
-                  }
-                },
-                {
-                  "type": "conditional",
-                  "conditions": [
-                    {
-                      "condition": "state",
-                      "entity": "input_select.vacuum_active_job",
-                      "state": "velyka_mop"
-                    }
-                  ],
-                  "card": {
-                    "type": "tile",
-                    "entity": "script.vacuum_velyka_kimnata_sweep_mop",
-                    "name": "Миється",
-                    "icon": "mdi:robot-vacuum",
-                    "hide_state": true,
-                    "vertical": false,
-                    "features_position": "bottom",
-                    "tap_action": {
-                      "action": "none"
-                    },
-                    "hold_action": {
-                      "action": "none"
-                    },
-                    "color": "green",
-                    "grid_options": {
-                      "columns": 6
-                    }
-                  },
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": "auto"
-                  }
-                },
-                {
-                  "type": "conditional",
-                  "conditions": [
-                    {
-                      "condition": "state",
-                      "entity": "input_select.vacuum_active_job",
-                      "state_not": "idle"
-                    },
-                    {
-                      "condition": "state",
-                      "entity": "input_select.vacuum_active_job",
-                      "state_not": "velyka_mop"
-                    }
-                  ],
-                  "card": {
-                    "type": "tile",
-                    "entity": "script.vacuum_velyka_kimnata_sweep_mop",
                     "name": "Помити",
                     "icon": "mdi:robot-vacuum",
                     "hide_state": true,
