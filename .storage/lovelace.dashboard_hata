@@ -1246,6 +1246,94 @@
           "max_columns": 4,
           "title": "Energy",
           "cards": []
+        },
+        {
+          "title": "Трамвай 2",
+          "path": "tram-2",
+          "icon": "mdi:tram",
+          "type": "sections",
+          "max_columns": 2,
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Трамвай №2",
+                  "heading_style": "title",
+                  "icon": "mdi:tram"
+                },
+                {
+                  "type": "markdown",
+                  "content": "**Зупинка:** Залізняка → Пасічна\n\nНаступні прибуття у хвилинах.",
+                  "grid_options": {
+                    "columns": "full",
+                    "rows": "auto"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.zalizniaka_501_42788_arrival_1",
+                  "name": "1-й трамвай",
+                  "icon": "mdi:tram",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "tap_action": {
+                    "action": "more-info"
+                  },
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.zalizniaka_501_42788_arrival_2",
+                  "name": "2-й трамвай",
+                  "icon": "mdi:tram",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "tap_action": {
+                    "action": "more-info"
+                  },
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.zalizniaka_501_42788_arrival_3",
+                  "name": "3-й трамвай",
+                  "icon": "mdi:tram",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "tap_action": {
+                    "action": "more-info"
+                  },
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.zalizniaka_501_42788_arrival_4",
+                  "name": "4-й трамвай",
+                  "icon": "mdi:tram",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "tap_action": {
+                    "action": "more-info"
+                  },
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
