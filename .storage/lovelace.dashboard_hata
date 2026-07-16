@@ -1252,83 +1252,61 @@
           "path": "tram-2",
           "icon": "mdi:tram",
           "type": "sections",
-          "max_columns": 2,
+          "max_columns": 1,
           "sections": [
             {
               "type": "grid",
               "cards": [
                 {
                   "type": "heading",
-                  "heading": "Трамвай №2",
+                  "icon": "mdi:train-bus",
                   "heading_style": "title",
-                  "icon": "mdi:tram"
+                  "heading": "Залізняка (501) (42788)"
                 },
                 {
-                  "type": "markdown",
-                  "content": "**Зупинка:** Залізняка → Пасічна\n\nНаступні прибуття у хвилинах.",
-                  "grid_options": {
-                    "columns": "full",
-                    "rows": "auto"
+                  "type": "conditional",
+                  "conditions": [
+                    {
+                      "condition": "state",
+                      "entity": "sensor.zalizniaka_501_42788_arrival_1",
+                      "state_not": [
+                        "unknown",
+                        "undefined"
+                      ]
+                    }
+                  ],
+                  "card": {
+                    "type": "tile",
+                    "entity": "sensor.zalizniaka_501_42788_arrival_1",
+                    "name": "",
+                    "show_entity_picture": true,
+                    "state_content": [
+                      "state",
+                      "destination"
+                    ]
                   }
                 },
                 {
-                  "type": "tile",
-                  "entity": "sensor.zalizniaka_501_42788_arrival_1",
-                  "name": "1-й трамвай",
-                  "icon": "mdi:tram",
-                  "vertical": false,
-                  "features_position": "bottom",
-                  "tap_action": {
-                    "action": "more-info"
-                  },
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": "auto"
-                  }
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.zalizniaka_501_42788_arrival_2",
-                  "name": "2-й трамвай",
-                  "icon": "mdi:tram",
-                  "vertical": false,
-                  "features_position": "bottom",
-                  "tap_action": {
-                    "action": "more-info"
-                  },
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": "auto"
-                  }
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.zalizniaka_501_42788_arrival_3",
-                  "name": "3-й трамвай",
-                  "icon": "mdi:tram",
-                  "vertical": false,
-                  "features_position": "bottom",
-                  "tap_action": {
-                    "action": "more-info"
-                  },
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": "auto"
-                  }
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.zalizniaka_501_42788_arrival_4",
-                  "name": "4-й трамвай",
-                  "icon": "mdi:tram",
-                  "vertical": false,
-                  "features_position": "bottom",
-                  "tap_action": {
-                    "action": "more-info"
-                  },
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": "auto"
+                  "type": "conditional",
+                  "conditions": [
+                    {
+                      "condition": "state",
+                      "entity": "sensor.zalizniaka_501_42788_arrival_2",
+                      "state_not": [
+                        "unknown",
+                        "undefined"
+                      ]
+                    }
+                  ],
+                  "card": {
+                    "type": "tile",
+                    "entity": "sensor.zalizniaka_501_42788_arrival_2",
+                    "name": "",
+                    "show_entity_picture": true,
+                    "state_content": [
+                      "state",
+                      "destination"
+                    ]
                   }
                 }
               ]
