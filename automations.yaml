@@ -58,3 +58,28 @@
           entity_id: switch.grillplats_plug
         action: switch.turn_off
   mode: single
+- id: '1788199327859'
+  alias: Recover OpenThread Border Router
+  description: Starts the OpenThread Border Router app when it is not running. Retries
+    every two minutes so a temporary disappearance of the USB RCP does not defeat
+    Supervisor's one-shot watchdog restart.
+  triggers:
+  - trigger: state
+    entity_id: binary_sensor.openthread_border_router_running
+    to: 'off'
+    for:
+      seconds: 15
+    id: stopped
+  - trigger: time_pattern
+    minutes: /2
+    id: retry
+  conditions:
+  - condition: state
+    entity_id: binary_sensor.openthread_border_router_running
+    state: 'off'
+  actions:
+  - action: hassio.app_start
+    data:
+      app: core_openthread_border_router
+    continue_on_error: true
+  mode: single
