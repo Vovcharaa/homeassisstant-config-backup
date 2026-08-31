@@ -60,9 +60,9 @@
   mode: single
 - id: '1788199327859'
   alias: Recover OpenThread Border Router
-  description: Starts the OpenThread Border Router app when it is not running. Retries
-    every two minutes so a temporary disappearance of the USB RCP does not defeat
-    Supervisor's one-shot watchdog restart.
+  description: Refreshes Supervisor's cached OTBR running state every two minutes
+    and starts the app when stopped. Rechecks after each start attempt so temporary
+    USB RCP disappearance does not defeat recovery.
   triggers:
   - trigger: state
     entity_id: binary_sensor.openthread_border_router_running
@@ -73,13 +73,25 @@
   - trigger: time_pattern
     minutes: /2
     id: retry
-  conditions:
+  conditions: []
+  actions:
+  - action: homeassistant.update_entity
+    target:
+      entity_id: binary_sensor.openthread_border_router_running
+    continue_on_error: true
+  - delay:
+      seconds: 12
   - condition: state
     entity_id: binary_sensor.openthread_border_router_running
     state: 'off'
-  actions:
   - action: hassio.app_start
     data:
       app: core_openthread_border_router
+    continue_on_error: true
+  - delay:
+      seconds: 20
+  - action: homeassistant.update_entity
+    target:
+      entity_id: binary_sensor.openthread_border_router_running
     continue_on_error: true
   mode: single
