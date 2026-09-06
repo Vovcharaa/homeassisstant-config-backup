@@ -68,6 +68,10 @@
                             {
                               "entity": "sensor.alpstuga_air_quality_monitor_big_pm2_5",
                               "name": "PM2.5"
+                            },
+                            {
+                              "entity": "switch.alpstuga_air_quality_monitor_big_display",
+                              "name": "Дисплей"
                             }
                           ]
                         }
@@ -868,6 +872,10 @@
                             {
                               "entity": "sensor.alpstuga_air_quality_monitor_small_pm2_5",
                               "name": "PM2.5"
+                            },
+                            {
+                              "entity": "switch.alpstuga_air_quality_monitor_small_display",
+                              "name": "Дисплей"
                             }
                           ]
                         }
