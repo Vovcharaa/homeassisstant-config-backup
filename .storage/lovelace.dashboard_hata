@@ -50,30 +50,32 @@
                   "grid_options": {
                     "columns": 6,
                     "rows": "auto"
-                  }
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.alpstuga_air_quality_monitor_big_carbon_dioxide",
-                  "name": "CO₂",
-                  "icon": "mdi:molecule-co2",
-                  "vertical": false,
-                  "features_position": "bottom",
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": "auto"
-                  }
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.alpstuga_air_quality_monitor_big_pm2_5",
-                  "name": "PM2.5",
-                  "icon": "mdi:blur",
-                  "vertical": false,
-                  "features_position": "bottom",
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": "auto"
+                  },
+                  "tap_action": {
+                    "action": "fire-dom-event",
+                    "browser_mod": {
+                      "service": "browser_mod.popup",
+                      "data": {
+                        "title": "Якість повітря — Велика кімната",
+                        "content": {
+                          "type": "entities",
+                          "show_header_toggle": false,
+                          "entities": [
+                            {
+                              "entity": "sensor.alpstuga_air_quality_monitor_big_carbon_dioxide",
+                              "name": "CO₂"
+                            },
+                            {
+                              "entity": "sensor.alpstuga_air_quality_monitor_big_pm2_5",
+                              "name": "PM2.5"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "hold_action": {
+                    "action": "more-info"
                   }
                 },
                 {
@@ -848,30 +850,32 @@
                   "grid_options": {
                     "columns": 6,
                     "rows": "auto"
-                  }
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.alpstuga_air_quality_monitor_small_carbon_dioxide",
-                  "name": "CO₂",
-                  "icon": "mdi:molecule-co2",
-                  "vertical": false,
-                  "features_position": "bottom",
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": "auto"
-                  }
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.alpstuga_air_quality_monitor_small_pm2_5",
-                  "name": "PM2.5",
-                  "icon": "mdi:blur",
-                  "vertical": false,
-                  "features_position": "bottom",
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": "auto"
+                  },
+                  "tap_action": {
+                    "action": "fire-dom-event",
+                    "browser_mod": {
+                      "service": "browser_mod.popup",
+                      "data": {
+                        "title": "Якість повітря — Мала кімната",
+                        "content": {
+                          "type": "entities",
+                          "show_header_toggle": false,
+                          "entities": [
+                            {
+                              "entity": "sensor.alpstuga_air_quality_monitor_small_carbon_dioxide",
+                              "name": "CO₂"
+                            },
+                            {
+                              "entity": "sensor.alpstuga_air_quality_monitor_small_pm2_5",
+                              "name": "PM2.5"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "hold_action": {
+                    "action": "more-info"
                   }
                 },
                 {
