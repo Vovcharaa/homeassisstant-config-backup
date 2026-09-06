@@ -1120,6 +1120,38 @@
               "type": "entity",
               "entity": "sensor.vovkcell_power_source",
               "name": "Джерело"
+            },
+            {
+              "type": "entity",
+              "entity": "binary_sensor.myggbett_door_window_sensor_door",
+              "name": "Передні двері",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
+              "color": "red",
+              "visibility": [
+                {
+                  "condition": "state",
+                  "entity": "binary_sensor.myggbett_door_window_sensor_door",
+                  "state": "on"
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "entity": "binary_sensor.myggbett_door_window_sensor_back_door",
+              "name": "Задні двері",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
+              "color": "red",
+              "visibility": [
+                {
+                  "condition": "state",
+                  "entity": "binary_sensor.myggbett_door_window_sensor_back_door",
+                  "state": "on"
+                }
+              ]
             }
           ]
         },
