@@ -18,19 +18,63 @@
                 },
                 {
                   "type": "tile",
-                  "entity": "sensor.timmerflotte_temp_hmd_sensor_temperature",
+                  "entity": "sensor.alpstuga_air_quality_monitor_big_temperature",
                   "name": "Температура",
                   "icon": "mdi:thermometer",
                   "vertical": false,
-                  "features_position": "bottom"
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
                 },
                 {
                   "type": "tile",
-                  "entity": "sensor.timmerflotte_temp_hmd_sensor_humidity",
+                  "entity": "sensor.alpstuga_air_quality_monitor_big_humidity",
                   "name": "Вологість",
                   "icon": "mdi:water-percent",
                   "vertical": false,
-                  "features_position": "bottom"
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.alpstuga_air_quality_monitor_big_air_quality",
+                  "name": "Якість повітря",
+                  "icon": "mdi:air-filter",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.alpstuga_air_quality_monitor_big_carbon_dioxide",
+                  "name": "CO₂",
+                  "icon": "mdi:molecule-co2",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.alpstuga_air_quality_monitor_big_pm2_5",
+                  "name": "PM2.5",
+                  "icon": "mdi:blur",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
                 },
                 {
                   "type": "tile",
@@ -524,6 +568,30 @@
                 },
                 {
                   "type": "tile",
+                  "entity": "sensor.timmerflotte_temp_hmd_sensor_temperature",
+                  "name": "Температура",
+                  "icon": "mdi:thermometer",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.timmerflotte_temp_hmd_sensor_humidity",
+                  "name": "Вологість",
+                  "icon": "mdi:water-percent",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
+                },
+                {
+                  "type": "tile",
                   "entity": "media_player.telik_kukhnia",
                   "name": "Телік",
                   "vertical": false,
@@ -745,6 +813,66 @@
                   "type": "heading",
                   "heading_style": "title",
                   "heading": "Мала кімната"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.alpstuga_air_quality_monitor_small_temperature",
+                  "name": "Температура",
+                  "icon": "mdi:thermometer",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.alpstuga_air_quality_monitor_small_humidity",
+                  "name": "Вологість",
+                  "icon": "mdi:water-percent",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.alpstuga_air_quality_monitor_small_air_quality",
+                  "name": "Якість повітря",
+                  "icon": "mdi:air-filter",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.alpstuga_air_quality_monitor_small_carbon_dioxide",
+                  "name": "CO₂",
+                  "icon": "mdi:molecule-co2",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.alpstuga_air_quality_monitor_small_pm2_5",
+                  "name": "PM2.5",
+                  "icon": "mdi:blur",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
                 },
                 {
                   "type": "conditional",
