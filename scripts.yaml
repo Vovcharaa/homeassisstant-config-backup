@@ -168,3 +168,12 @@ vacuum_velyka_kimnata_sweep_mop:
       entity_id: notify.xiaomi_de_1171929617_ov51gl_start_vacuum_room_sweep_a_2_16
     data:
       message: '14'
+toggle_display:
+  sequence:
+  - action: switch.toggle
+    metadata: {}
+    target:
+      entity_id: switch.alpstuga_air_quality_monitor_small_display
+    data: {}
+  alias: Toggle display
+  description: of the clock in the small bedroom
